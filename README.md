@@ -1,91 +1,36 @@
-[![Daily GitHub Commit](https://github.com/eDDie-05/Gta-V-map-system/actions/workflows/daily-commit.yml/badge.svg)](https://github.com/eDDie-05/Gta-V-map-system/actions/workflows/daily-commit.yml)
-# GTAV Map System
+# Open-World Map Simulation — Python and C++ prototypes
 
-A map-based project inspired by the world of **Grand Theft Auto V (GTAV)**. The system is designed to display locations, points of interest, routes, and other map-related information.
+A small 2D open-world map simulation inspired by large city game environments. The repository contains two separate prototype implementations.
 
-## Features
+## Implementations
+- `gtav.py` — Python implementation using Pygame
+- `gtavcpp.cpp` — C++ implementation using SDL2
 
-* Interactive map
-* Location markers
-* Points of interest
-* Search locations
-* Display coordinates
-* Location categories
-* Route and navigation information
-* Map zoom and navigation
-* Organized location data
+The Python source creates a large scrolling world with roads, buildings, trees, vehicles and a player-controlled camera/world view. The C++ source is an SDL2 prototype and may require additional build setup.
 
-## Map Categories
+## Python version: requirements and run
+Requirements:
+- Python 3.9 or newer
+- Pygame
 
-The system can organize locations into categories such as:
-
-* 🏠 Houses
-* 🏢 Buildings
-* 🚗 Vehicle locations
-* 🏥 Hospitals
-* 🚓 Police stations
-* 🛒 Shops
-* 🔧 Vehicle repair locations
-* ✈️ Airports
-* 🌴 Landmarks
-* 📍 Custom locations
-
-## Technologies
-
-Depending on the implementation, the project may use:
-
-* HTML
-* CSS
-* JavaScript
-* Map APIs
-* JSON for location data
-
-## Example Location Data
-
-```json
-{
-    "name": "Los Santos Airport",
-    "category": "Airport",
-    "latitude": 33.94,
-    "longitude": -118.40
-}
+```bash
+python -m venv .venv
+# macOS / Linux
+source .venv/bin/activate
+# Windows PowerShell
+.venv\\Scripts\\Activate.ps1
+python -m pip install pygame
+python gtav.py
 ```
 
-## Project Structure
+## C++ version
+The C++ prototype includes SDL2 headers. Install the SDL2 development package for your operating system, then compile with the appropriate SDL2 compiler and linker flags. A portable build command is not yet provided in this repository.
 
-```text
-gtav-map-system/
-│
-├── index.html
-├── style.css
-├── script.js
-├── data/
-│   └── locations.json
-├── images/
-└── README.md
-```
+## Scope
+This is an educational 2D simulation prototype, not a complete GTA V map, navigation service or production game. It does not use official GTA V assets or provide real-world map data.
 
-## Purpose
-
-The project is intended for **learning and practicing map-based application development**, including location data, markers, searching, and interactive user interfaces.
-
-## Future Improvements
-
-* GPS-style navigation
-* Custom marker creation
-* Distance calculation
-* Route visualization
-* Location filtering
-* Mobile-responsive interface
-* User-added locations
-* More detailed map data
-
-## Disclaimer
-
-This is an independent educational project inspired by GTAV. It is not affiliated with or endorsed by Rockstar Games.
-
-## eDDie
-
-**GTAV Map System**
-
-Created for educational and programming purposes.
+## Next improvements
+- Add a documented C++ build configuration
+- Separate world data, rendering and input handling
+- Add reproducible world generation and configuration
+- Add tests for camera bounds and world-coordinate calculations
