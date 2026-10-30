@@ -1,3 +1,4 @@
+[![Daily GitHub Commit](https://github.com/eDDie-05/Gta-V-map-system/actions/workflows/daily-commit.yml/badge.svg)](https://github.com/eDDie-05/Gta-V-map-system/actions/workflows/daily-commit.yml)
 # GTAV Map System
 
 A map-based project inspired by the world of **Grand Theft Auto V (GTAV)**. The system is designed to display locations, points of interest, routes, and other map-related information.
